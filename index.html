@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>8 March 2017 ND-app</title>
+</head>
+<body>
+  <div class="app-wrapper">
+    <div class="root" ui-view ng-cloak></div>
+    <div  class="root" ui-view="header" ng-cloak></div>
+    <div  class="root" ui-view="content" ng-cloak></div>
+  </div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-ui-router.min.js"></script>
+  <script src="js/taskContentArray.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

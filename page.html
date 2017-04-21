@@ -1,0 +1,19 @@
+<div class="task__img-wrapper">
+  <img ng-src="{{taskImg}}" alt="{{altImg}}" height="300" class="task__img">
+</div>
+<div class="task__text-wrapper">
+  <div class="question">
+    <p ng-repeat="paragraph in question">{{paragraph}}
+  </p></div>
+  <hr>
+  <ul class="variants-list" ng-show="!show">
+    <li class="variants-item" ng-repeat="item in variants" data-order="{{$index}}" ng-click="checkIt($event)">{{item}}</li>
+  </ul>
+  <div class="answer-block" ng-show="show">
+    <h2 class="answer-comment-title" ng-class="{'correct': isCorrect}">{{commentTitle}}</h2>
+    <p class="answer-comment-text" ng-repeat="text in commentText">{{text}}</p>
+    <div class="page__btn-box">
+      <button ng-click="toNext()" class="btn">Далее</button>
+    </div>
+  </div>
+</div>
